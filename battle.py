@@ -32,7 +32,7 @@ def show_status():
     print(f'{enemy["name"]}: {enemy["hp"]} HP')
 
 
-print("A wild Pikachu appeared!")
+print("A wild Charmander appears!")
 show_status()
 
 attack(player, enemy)
