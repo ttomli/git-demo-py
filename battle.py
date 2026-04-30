@@ -12,6 +12,9 @@ enemy = {
     "attack": 10
 }
 
+def use_potion(character):
+    character["hp"] += 10
+    print(f'{character["name"]} used a potion and recovered 10 HP!')
 
 def attack(attacker, defender):
     damage = random.randint(5, attacker["attack"])
@@ -29,6 +32,8 @@ show_status()
 
 attack(player, enemy)
 attack(enemy, player)
+
+use_potion(player)
 
 print("\nAfter one round:")
 show_status()
