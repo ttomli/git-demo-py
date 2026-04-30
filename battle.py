@@ -18,6 +18,11 @@ def use_potion(character):
 
 def attack(attacker, defender):
     damage = random.randint(5, attacker["attack"])
+
+    if random.random() < 0.25:
+        damage *= 2
+        print("Critical hit!")
+
     defender["hp"] -= damage
     print(f'{attacker["name"]} attacks {defender["name"]} for {damage} damage!')
 
